@@ -16,11 +16,12 @@ func reverse(x int) int {
 		digit := x % 10
 		res = res * 10 + digit
 	}
-    if res > max32 || res < min32 {
-		return 0
-	}
+
 	if sign {
 		res = -res
+	}
+	    if res > max32 || res < min32 {
+		return 0
 	}
 	return res
 }
