@@ -1,4 +1,3 @@
-
 const max32 = 2147483647 // 2^31-1
 const min32 = -2147483648 // -2^31
 
@@ -16,6 +15,9 @@ func reverse(x int) int {
 	for ; x > 0; x = x / 10 {
 		digit := x % 10
 		res = res * 10 + digit
+	}
+    if res > max32 || res < min32 {
+		return 0
 	}
 	if sign {
 		res = -res
